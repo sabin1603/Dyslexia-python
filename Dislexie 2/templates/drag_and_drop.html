@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joacă - Drag & Drop</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Joacă - Trage vocala în coșul corect</h1>
+
+    <!-- Coșuri pentru vocale -->
+    <div id="baskets-container" class="baskets-container">
+        <div class="basket" data-vowel="A">A</div>
+        <div class="basket" data-vowel="E">E</div>
+        <div class="basket" data-vowel="I">I</div>
+        <div class="basket" data-vowel="O">O</div>
+        <div class="basket" data-vowel="U">U</div>
+    </div>
+
+    <!-- Vocalele care pot fi trase -->
+    <div id="drag-items-container" class="drag-items-container"></div>
+
+    <!-- Feedback și scor -->
+    <p id="feedback" class="feedback"></p>
+    <p id="score" class="score">Scor: 0</p>
+
+    <script src="/static/drag_and_drop.js"></script>
+</body>
+</html>

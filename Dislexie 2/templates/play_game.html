@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joacă - Selectează vocala</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Joacă - Selectează vocala corectă</h1>
+    <p id="question" class="question"></p>
+
+    <div class="vowels-container">
+        <!-- Coloana pentru vocalele mari -->
+        <div class="vowels-column" id="big-vowels">
+            <button class="vowel-button" data-vowel="A">A</button>
+            <button class="vowel-button" data-vowel="E">E</button>
+            <button class="vowel-button" data-vowel="I">I</button>
+            <button class="vowel-button" data-vowel="O">O</button>
+            <button class="vowel-button" data-vowel="U">U</button>
+        </div>
+
+        <!-- Coloana pentru vocalele mici -->
+        <div class="vowels-column" id="small-vowels">
+            <button class="vowel-button" data-vowel="a">a</button>
+            <button class="vowel-button" data-vowel="e">e</button>
+            <button class="vowel-button" data-vowel="i">i</button>
+            <button class="vowel-button" data-vowel="o">o</button>
+            <button class="vowel-button" data-vowel="u">u</button>
+        </div>
+    </div>
+
+    <p id="score" class="score">Scor: 0</p>
+    <p id="feedback" class="feedback"></p>
+
+    <audio id="correct-sound" src="/static/sounds/correct.mp3"></audio>
+    <audio id="wrong-sound" src="/static/sounds/wrong.mp3"></audio>
+
+    <script src="/static/play_game.js"></script>
+</body>
+</html>

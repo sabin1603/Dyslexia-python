@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mod de învățare - Vocale Mari și Mici</title>
+    <style>
+        /* Stiluri generale */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Container pentru cele două coloane */
+        .vowels-container {
+            display: flex;
+            justify-content: center; /* Aliniază coloanele în centru */
+            gap: 50px; /* Spațiu între cele două coloane */
+            margin-top: 20px;
+        }
+
+        /* Stilizare pentru fiecare coloană */
+        .vowels-column {
+            display: flex;
+            flex-direction: column; /* Aranjează butoanele pe verticală */
+            gap: 10px; /* Spațiu între butoane */
+        }
+
+        /* Butoane */
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 80px; /* Dimensiune fixă pentru butoane */
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Apasă pe o vocală pentru a-i auzi sunetul!</h1>
+    <div class="vowels-container">
+        <!-- Coloana pentru vocalele mari -->
+        <div class="vowels-column">
+            <button onclick="playSound('A')">A</button>
+            <button onclick="playSound('E')">E</button>
+            <button onclick="playSound('I')">I</button>
+            <button onclick="playSound('O')">O</button>
+            <button onclick="playSound('U')">U</button>
+        </div>
+        <!-- Coloana pentru vocalele mici -->
+        <div class="vowels-column">
+            <button onclick="playSound('a')">a</button>
+            <button onclick="playSound('e')">e</button>
+            <button onclick="playSound('i')">i</button>
+            <button onclick="playSound('o')">o</button>
+            <button onclick="playSound('u')">u</button>
+        </div>
+    </div>
+
+    <!-- Script pentru redarea sunetelor -->
+    <script>
+        function playSound(vowel) {
+            const audio = new Audio(`/static/sounds/${vowel}.mp3`);
+            audio.play();
+        }
+    </script>
+</body>
+</html>
